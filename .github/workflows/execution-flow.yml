@@ -78,7 +78,7 @@ jobs:
           path: dist
   deploy:
     needs: build
-    uses: ./github/workflows/build-flow.yml
+    uses: ./.github/workflows/build-flow.yml
   failure-report:
     needs: [lint, deploy, build]
     if: failure()
