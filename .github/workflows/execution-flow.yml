@@ -7,9 +7,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
+      - name: Get code temp
         uses: actions/checkout@v3
-      - name: Install node.js
+      - name: Install nodeJs
         uses: actions/setup-node@v3
       - name: Cache dependencies
         id: cache
