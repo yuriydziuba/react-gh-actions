@@ -78,6 +78,8 @@ jobs:
           path: dist
   deploy:
     needs: build
+    with:
+      artifact-name: dist-files
     uses: ./.github/workflows/build-flow.yml
   failure-report:
     needs: [lint, deploy, build]
